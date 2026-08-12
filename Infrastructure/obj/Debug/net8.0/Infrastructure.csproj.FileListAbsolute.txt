@@ -1,0 +1,15 @@
+A:\T2M\Backend-Sistema-de-Gerenciamento-de-Assinaturas\Api\Infrastructure\bin\Debug\net8.0\Infrastructure.deps.json
+A:\T2M\Backend-Sistema-de-Gerenciamento-de-Assinaturas\Api\Infrastructure\bin\Debug\net8.0\Infrastructure.dll
+A:\T2M\Backend-Sistema-de-Gerenciamento-de-Assinaturas\Api\Infrastructure\bin\Debug\net8.0\Infrastructure.pdb
+A:\T2M\Backend-Sistema-de-Gerenciamento-de-Assinaturas\Api\Infrastructure\bin\Debug\net8.0\Domain.dll
+A:\T2M\Backend-Sistema-de-Gerenciamento-de-Assinaturas\Api\Infrastructure\bin\Debug\net8.0\Domain.pdb
+A:\T2M\Backend-Sistema-de-Gerenciamento-de-Assinaturas\Api\Infrastructure\obj\Debug\net8.0\Infrastructure.csproj.AssemblyReference.cache
+A:\T2M\Backend-Sistema-de-Gerenciamento-de-Assinaturas\Api\Infrastructure\obj\Debug\net8.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+A:\T2M\Backend-Sistema-de-Gerenciamento-de-Assinaturas\Api\Infrastructure\obj\Debug\net8.0\Infrastructure.AssemblyInfoInputs.cache
+A:\T2M\Backend-Sistema-de-Gerenciamento-de-Assinaturas\Api\Infrastructure\obj\Debug\net8.0\Infrastructure.AssemblyInfo.cs
+A:\T2M\Backend-Sistema-de-Gerenciamento-de-Assinaturas\Api\Infrastructure\obj\Debug\net8.0\Infrastructure.csproj.CoreCompileInputs.cache
+A:\T2M\Backend-Sistema-de-Gerenciamento-de-Assinaturas\Api\Infrastructure\obj\Debug\net8.0\Infrastr.15EFFBFE.Up2Date
+A:\T2M\Backend-Sistema-de-Gerenciamento-de-Assinaturas\Api\Infrastructure\obj\Debug\net8.0\Infrastructure.dll
+A:\T2M\Backend-Sistema-de-Gerenciamento-de-Assinaturas\Api\Infrastructure\obj\Debug\net8.0\refint\Infrastructure.dll
+A:\T2M\Backend-Sistema-de-Gerenciamento-de-Assinaturas\Api\Infrastructure\obj\Debug\net8.0\Infrastructure.pdb
+A:\T2M\Backend-Sistema-de-Gerenciamento-de-Assinaturas\Api\Infrastructure\obj\Debug\net8.0\ref\Infrastructure.dll

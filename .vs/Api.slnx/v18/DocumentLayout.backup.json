@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "A:\\T2M\\Backend-Sistema-de-Gerenciamento-de-Assinaturas\\Api\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|Api\\Api.csproj|a:\\t2m\\backend-sistema-de-gerenciamento-de-assinaturas\\api\\api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|Api\\Api.csproj|solutionrelative:api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7ED0CE7B-7CC6-42D4-813B-618A3729C943}|Application\\Application.csproj|a:\\t2m\\backend-sistema-de-gerenciamento-de-assinaturas\\api\\application\\services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7ED0CE7B-7CC6-42D4-813B-618A3729C943}|Application\\Application.csproj|solutionrelative:application\\services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7ED0CE7B-7CC6-42D4-813B-618A3729C943}|Application\\Application.csproj|a:\\t2m\\backend-sistema-de-gerenciamento-de-assinaturas\\api\\application\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7ED0CE7B-7CC6-42D4-813B-618A3729C943}|Application\\Application.csproj|solutionrelative:application\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7ED0CE7B-7CC6-42D4-813B-618A3729C943}|Application\\Application.csproj|a:\\t2m\\backend-sistema-de-gerenciamento-de-assinaturas\\api\\application\\dtos\\usuariologindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7ED0CE7B-7CC6-42D4-813B-618A3729C943}|Application\\Application.csproj|solutionrelative:application\\dtos\\usuariologindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7ED0CE7B-7CC6-42D4-813B-618A3729C943}|Application\\Application.csproj|a:\\t2m\\backend-sistema-de-gerenciamento-de-assinaturas\\api\\application\\dtos\\usuariocadastrodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7ED0CE7B-7CC6-42D4-813B-618A3729C943}|Application\\Application.csproj|solutionrelative:application\\dtos\\usuariocadastrodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|Api\\Api.csproj|a:\\t2m\\backend-sistema-de-gerenciamento-de-assinaturas\\api\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|Api\\Api.csproj|solutionrelative:api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UsuarioService.cs",
+              "DocumentMoniker": "A:\\T2M\\Backend-Sistema-de-Gerenciamento-de-Assinaturas\\Api\\Application\\Services\\UsuarioService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\UsuarioService.cs",
+              "ToolTip": "A:\\T2M\\Backend-Sistema-de-Gerenciamento-de-Assinaturas\\Api\\Application\\Services\\UsuarioService.cs",
+              "RelativeToolTip": "Application\\Services\\UsuarioService.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAwwBcAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-12T21:36:14.533Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TokenService.cs",
+              "DocumentMoniker": "A:\\T2M\\Backend-Sistema-de-Gerenciamento-de-Assinaturas\\Api\\Application\\Services\\TokenService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\TokenService.cs",
+              "ToolTip": "A:\\T2M\\Backend-Sistema-de-Gerenciamento-de-Assinaturas\\Api\\Application\\Services\\TokenService.cs",
+              "RelativeToolTip": "Application\\Services\\TokenService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-12T21:36:13.791Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UsuarioLoginDto.cs",
+              "DocumentMoniker": "A:\\T2M\\Backend-Sistema-de-Gerenciamento-de-Assinaturas\\Api\\Application\\DTOs\\UsuarioLoginDto.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\UsuarioLoginDto.cs",
+              "ToolTip": "A:\\T2M\\Backend-Sistema-de-Gerenciamento-de-Assinaturas\\Api\\Application\\DTOs\\UsuarioLoginDto.cs",
+              "RelativeToolTip": "Application\\DTOs\\UsuarioLoginDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-12T21:36:08.728Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UsuarioCadastroDto.cs",
+              "DocumentMoniker": "A:\\T2M\\Backend-Sistema-de-Gerenciamento-de-Assinaturas\\Api\\Application\\DTOs\\UsuarioCadastroDto.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\UsuarioCadastroDto.cs",
+              "ToolTip": "A:\\T2M\\Backend-Sistema-de-Gerenciamento-de-Assinaturas\\Api\\Application\\DTOs\\UsuarioCadastroDto.cs",
+              "RelativeToolTip": "Application\\DTOs\\UsuarioCadastroDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-12T21:36:07.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "A:\\T2M\\Backend-Sistema-de-Gerenciamento-de-Assinaturas\\Api\\Api\\Program.cs",
+              "RelativeDocumentMoniker": "Api\\Program.cs",
+              "ToolTip": "A:\\T2M\\Backend-Sistema-de-Gerenciamento-de-Assinaturas\\Api\\Api\\Program.cs",
+              "RelativeToolTip": "Api\\Program.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-12T21:35:42.962Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "A:\\T2M\\Backend-Sistema-de-Gerenciamento-de-Assinaturas\\Api\\Api\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Api\\Controllers\\AuthController.cs",
+              "ToolTip": "A:\\T2M\\Backend-Sistema-de-Gerenciamento-de-Assinaturas\\Api\\Api\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Api\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAIwDMAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-12T21:34:46.447Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

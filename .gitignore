@@ -1,0 +1,8 @@
+#ignora as senhas
+appsettings.json
+appsettings.Development.json
+
+# Ignorar pastas de compilacao
+bin/
+obj/
+.vs/
