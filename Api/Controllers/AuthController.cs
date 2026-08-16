@@ -48,10 +48,10 @@ namespace Api.Controllers
         }
 
         [HttpGet("perfil")]
-        [Authorize] //tipo o bagulho de security do spring
+        [Authorize]
         public IActionResult MeuPerfil()
         {
-            //extraindo os dados do token (vi q essa parada é diferente do spring, a  ideia no .NET é extrair do token, de alguma forma que não compreendi completamente)
+            // pro autocomplete de editarPerfil
             var id = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             var email = User.FindFirst(ClaimTypes.Email)?.Value;
             var nome = User.FindFirst(ClaimTypes.Name)?.Value;
@@ -63,6 +63,31 @@ namespace Api.Controllers
                 Nome = nome,
                 Email = email
             });
+        }
+
+        [HttpPut("perfil")]
+        [Authorize]
+        public async Task<IActionResult> EditarPerfil([FromBody] UsuarioEdicaoDto dto)
+        {
+            try
+            {
+                //endpoint p editar o perfil
+
+                // pega o id do token, masi seguro assim
+                var idLogado = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+                //chama o service com id e o payload
+                if (idLogado != null)
+                {
+                    await _usuarioService.AtualizarPerfilAsync(Guid.Parse(idLogado), dto);
+                }
+
+                return Ok(new { mensagem = "Perfil atualizado com sucesso!" });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { erro = ex.Message });
+            }
         }
     }
 }

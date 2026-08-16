@@ -1,7 +1,10 @@
-using System.Text;
+using Application.Services;
+using Domain.Repositories;
+using Infrastructure.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -52,6 +55,8 @@ builder.Services.AddSwaggerGen(c =>
 builder.Services.AddScoped<Domain.Repositories.IUsuarioRepository, Infrastructure.Repositories.UsuarioRepository>();
 builder.Services.AddScoped<Application.Services.UsuarioService>();
 builder.Services.AddScoped<Application.Services.TokenService>();
+builder.Services.AddScoped<IDependenteRepository, DependenteRepository>();
+builder.Services.AddScoped<DependenteService>();
 
 //vem do appsettings.json essa chave
 var key = Encoding.ASCII.GetBytes(builder.Configuration["Jwt:Key"] ?? "");

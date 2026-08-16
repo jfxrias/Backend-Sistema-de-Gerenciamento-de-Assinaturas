@@ -1,17 +1,24 @@
 ﻿using Application.DTOs;
 using Domain.Entities;
 using Domain.Repositories;
+using System;
+using System.Threading.Tasks;
 
 namespace Application.Services
 {
     public class UsuarioService
     {
-        private readonly IUsuarioRepository _repository;
+        private readonly IUsuarioRepository _usuarioRepository;
+        private readonly IDependenteRepository _dependenteRepository;
         private readonly TokenService _tokenService;
 
-        public UsuarioService(IUsuarioRepository repository, TokenService tokenService)
+        public UsuarioService(
+            IUsuarioRepository usuarioRepository,
+            IDependenteRepository dependenteRepository,
+            TokenService tokenService)
         {
-            _repository = repository;
+            _usuarioRepository = usuarioRepository;
+            _dependenteRepository = dependenteRepository;
             _tokenService = tokenService;
         }
 
@@ -21,21 +28,44 @@ namespace Application.Services
             {
                 Nome = dto.Nome,
                 Email = dto.Email,
-                Senha = dto.Senha // se der tempo vou colocar bcrypt
+                Senha = dto.Senha
             };
 
-            await _repository.CadastrarAsync(usuario);
+            await _usuarioRepository.CadastrarAsync(usuario);
+        }
+
+        public async Task AtualizarPerfilAsync(Guid id, UsuarioEdicaoDto dto)
+        {
+            var usuario = await _usuarioRepository.ObterPorIdAsync(id);
+
+            if (usuario == null)
+            {
+                throw new Exception("Usuário não encontrado.");
+            }
+
+            usuario.Nome = dto.Nome;
+            usuario.Email = dto.Email;
+
+            await _usuarioRepository.AtualizarAsync(usuario);
         }
 
         public async Task<string> LoginAsync(UsuarioLoginDto dto)
         {
-            var usuario = await _repository.ObterPorEmailAsync(dto.Email);
+            var usuario = await _usuarioRepository.ObterPorEmailESenhaAsync(dto.Email, dto.Senha);
 
-            if (usuario == null || usuario.Senha != dto.Senha)
+            if (usuario != null)
             {
-                throw new Exception("Email ou senha inválidos.");
+                return _tokenService.GerarToken(usuario);
             }
-            return _tokenService.GerarToken(usuario);
+
+            var dependente = await _dependenteRepository.ObterPorEmailESenhaAsync(dto.Email, dto.Senha);
+
+            if (dependente != null)
+            {
+                return _tokenService.GerarTokenDependente(dependente);
+            }
+
+            throw new Exception("E-mail ou senha inválidos.");
         }
     }
 }
