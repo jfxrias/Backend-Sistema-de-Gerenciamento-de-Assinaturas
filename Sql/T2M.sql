@@ -2,12 +2,12 @@
 -- PostgreSQL database dump
 --
 
-\restrict sJVcPxJOaC5wpJ6bZAxyPAM798RlS3JpqCWubjvL6EgYgjlDp0eO0ata83sZshx
+\restrict 5UyZVUInOT7fs1ohGkn24yo8OrRnf4EAHBkzSUBiiotn2MU2z0Ad4c6HXkqzxRT
 
 -- Dumped from database version 18.3
 -- Dumped by pg_dump version 18.3
 
--- Started on 2026-08-16 22:33:42
+-- Started on 2026-08-17 08:21:22
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -93,7 +93,7 @@ COPY public.assinaturas (id, nome, maxdependentes, maxtelas, valor) FROM stdin;
 --
 
 COPY public.dependentes (id, assinanteid, nome, email, senha) FROM stdin;
-063844ff-2caf-4d63-9729-83810ceaf3f2	063844ff-2caf-4d63-9729-83810ceaf3f2	João Gabriel	joao@gmail.com	123
+93598766-722d-4b29-8830-cfb7987515b1	60ef277b-4d5b-40b7-aa7f-b8bbdc03d5d8	João Machado	joao@email.com	$2a$11$BzyLSBxCcXbeAkbN.FwoyeKiYRPbXCcCoo0lr9w3Nqfa0M2ovkcPa
 \.
 
 
@@ -104,8 +104,7 @@ COPY public.dependentes (id, assinanteid, nome, email, senha) FROM stdin;
 --
 
 COPY public.usuarios (id, nome, email, senha, assinaturaid) FROM stdin;
-00000000-0000-0000-0000-000000000000	Rafaela dos Santos	rafaela@email.com	123	660e8400-e29b-41d4-a716-446655440001
-063844ff-2caf-4d63-9729-83810ceaf3f2	Breno	breno@email.com	123	770e8400-e29b-41d4-a716-446655440002
+60ef277b-4d5b-40b7-aa7f-b8bbdc03d5d8	Breno de Almeida	breno@email.com	$2a$11$o1xviVYNv84ooYBRhs0HEu.ui6U/xo/xwQqxGRJLoUMx063PJ9r9u	770e8400-e29b-41d4-a716-446655440002
 \.
 
 
@@ -172,11 +171,11 @@ ALTER TABLE ONLY public.usuarios
     ADD CONSTRAINT fk_usuario_assinatura FOREIGN KEY (assinaturaid) REFERENCES public.assinaturas(id);
 
 
--- Completed on 2026-08-16 22:33:43
+-- Completed on 2026-08-17 08:21:22
 
 --
 -- PostgreSQL database dump complete
 --
 
-\unrestrict sJVcPxJOaC5wpJ6bZAxyPAM798RlS3JpqCWubjvL6EgYgjlDp0eO0ata83sZshx
+\unrestrict 5UyZVUInOT7fs1ohGkn24yo8OrRnf4EAHBkzSUBiiotn2MU2z0Ad4c6HXkqzxRT
 
