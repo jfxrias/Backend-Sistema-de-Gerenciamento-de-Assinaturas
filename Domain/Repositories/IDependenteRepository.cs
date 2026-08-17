@@ -10,5 +10,6 @@ namespace Domain.Repositories
         Task AtualizarAsync(Dependente dependente);
         Task DeletarAsync(Guid id, Guid assinanteId);
         Task<Dependente> ObterPorEmailESenhaAsync(string email, string senha);
+        Task<Dependente?> ObterPorEmailAsync(string email);
     }
 }

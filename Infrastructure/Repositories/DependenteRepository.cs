@@ -61,5 +61,12 @@ namespace Infrastructure.Repositories
             string sql = "SELECT id, nome, email, senha, assinanteid FROM dependentes WHERE email = @Email AND senha = @Senha";
             return await dbConnection.QueryFirstOrDefaultAsync<Dependente>(sql, new { Email = email, Senha = senha });
         }
+
+        public async Task<Dependente?> ObterPorEmailAsync(string email)
+        {
+            using IDbConnection dbConnection = new NpgsqlConnection(_connectionString);
+            string sql = "SELECT id, nome, email, senha, assinanteid FROM dependentes WHERE email = @Email";
+            return await dbConnection.QueryFirstOrDefaultAsync<Dependente>(sql, new { Email = email });
+        }
     }
 }

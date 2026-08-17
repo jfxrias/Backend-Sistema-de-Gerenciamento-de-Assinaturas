@@ -28,7 +28,7 @@ namespace Application.Services
             {
                 Nome = dto.Nome,
                 Email = dto.Email,
-                Senha = dto.Senha,
+                Senha = BCrypt.Net.BCrypt.HashPassword(dto.Senha),
                 AssinaturaId = dto.AssinaturaId
             };
 
@@ -52,9 +52,9 @@ namespace Application.Services
 
         public async Task<object> LoginAsync(UsuarioLoginDto dto)
         {
-            var usuario = await _usuarioRepository.ObterPorEmailESenhaAsync(dto.Email, dto.Senha);
+            var usuario = await _usuarioRepository.ObterPorEmailAsync(dto.Email);
 
-            if (usuario != null)
+            if (usuario != null && BCrypt.Net.BCrypt.Verify(dto.Senha, usuario.Senha))
             {
                 return new
                 {
@@ -64,9 +64,9 @@ namespace Application.Services
                 };
             }
 
-            var dependente = await _dependenteRepository.ObterPorEmailESenhaAsync(dto.Email, dto.Senha);
+            var dependente = await _dependenteRepository.ObterPorEmailAsync(dto.Email);
 
-            if (dependente != null)
+            if (dependente != null && BCrypt.Net.BCrypt.Verify(dto.Senha, dependente.Senha))
             {
                 var titular = await _usuarioRepository.ObterPorIdAsync(dependente.AssinanteId);
 

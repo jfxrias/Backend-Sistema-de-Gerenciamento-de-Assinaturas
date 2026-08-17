@@ -21,7 +21,7 @@ namespace Infrastructure.Repositories
         public async Task CadastrarAsync(Usuario usuario)
         {
             using IDbConnection dbConnection = new NpgsqlConnection(_connectionString);
-            string sql = "INSERT INTO usuarios (id, nome, email, senha, assinaturaid) VALUES (@Id, @Nome, @Email, @Senha, @AssinaturaId)";
+            string sql = "INSERT INTO usuarios (nome, email, senha, assinaturaid) VALUES ( @Nome, @Email, @Senha, @AssinaturaId)";
 
             await dbConnection.ExecuteAsync(sql, usuario);
         }

@@ -19,7 +19,7 @@ namespace Application.Services
             {
                 Nome = dto.Nome,
                 Email = dto.Email,
-                Senha = dto.Senha,
+                Senha = BCrypt.Net.BCrypt.HashPassword(dto.Senha),
                 AssinanteId = usuarioLogadoId
             };
 
@@ -38,7 +38,7 @@ namespace Application.Services
                 Id = id,
                 Nome = dto.Nome,
                 Email = dto.Email,
-                Senha = dto.Senha,
+                Senha = BCrypt.Net.BCrypt.HashPassword(dto.Senha),
                 AssinanteId = usuarioLogadoId
             };
 
