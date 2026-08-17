@@ -28,7 +28,8 @@ namespace Application.Services
             {
                 Nome = dto.Nome,
                 Email = dto.Email,
-                Senha = dto.Senha
+                Senha = dto.Senha,
+                AssinaturaId = dto.AssinaturaId
             };
 
             await _usuarioRepository.CadastrarAsync(usuario);
@@ -49,20 +50,32 @@ namespace Application.Services
             await _usuarioRepository.AtualizarAsync(usuario);
         }
 
-        public async Task<string> LoginAsync(UsuarioLoginDto dto)
+        public async Task<object> LoginAsync(UsuarioLoginDto dto)
         {
             var usuario = await _usuarioRepository.ObterPorEmailESenhaAsync(dto.Email, dto.Senha);
 
             if (usuario != null)
             {
-                return _tokenService.GerarToken(usuario);
+                return new
+                {
+                    token = _tokenService.GerarToken(usuario),
+                    role = "Titular",
+                    assinaturaId = usuario.AssinaturaId
+                };
             }
 
             var dependente = await _dependenteRepository.ObterPorEmailESenhaAsync(dto.Email, dto.Senha);
 
             if (dependente != null)
             {
-                return _tokenService.GerarTokenDependente(dependente);
+                var titular = await _usuarioRepository.ObterPorIdAsync(dependente.AssinanteId);
+
+                return new
+                {
+                    token = _tokenService.GerarTokenDependente(dependente),
+                    role = "Dependente",
+                    assinaturaId = titular?.AssinaturaId
+                };
             }
 
             throw new Exception("E-mail ou senha inválidos.");

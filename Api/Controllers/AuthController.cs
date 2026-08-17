@@ -36,10 +36,9 @@ namespace Api.Controllers
         {
             try
             {
-                //chama o service
-                var token = await _usuarioService.LoginAsync(dto);
+                var resultado = await _usuarioService.LoginAsync(dto);
 
-                return Ok(new { token = token });
+                return Ok(resultado);
             }
             catch (Exception ex)
             {
@@ -51,7 +50,6 @@ namespace Api.Controllers
         [Authorize]
         public IActionResult MeuPerfil()
         {
-            // pro autocomplete de editarPerfil
             var id = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             var email = User.FindFirst(ClaimTypes.Email)?.Value;
             var nome = User.FindFirst(ClaimTypes.Name)?.Value;
@@ -71,12 +69,8 @@ namespace Api.Controllers
         {
             try
             {
-                //endpoint p editar o perfil
-
-                // pega o id do token, masi seguro assim
                 var idLogado = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
 
-                //chama o service com id e o payload
                 if (idLogado != null)
                 {
                     await _usuarioService.AtualizarPerfilAsync(Guid.Parse(idLogado), dto);

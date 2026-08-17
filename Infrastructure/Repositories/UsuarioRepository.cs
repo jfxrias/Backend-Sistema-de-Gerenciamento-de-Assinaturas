@@ -21,7 +21,7 @@ namespace Infrastructure.Repositories
         public async Task CadastrarAsync(Usuario usuario)
         {
             using IDbConnection dbConnection = new NpgsqlConnection(_connectionString);
-            string sql = "INSERT INTO usuarios (id, nome, email, senha) VALUES (@Id, @Nome, @Email, @Senha)";
+            string sql = "INSERT INTO usuarios (id, nome, email, senha, assinaturaid) VALUES (@Id, @Nome, @Email, @Senha, @AssinaturaId)";
 
             await dbConnection.ExecuteAsync(sql, usuario);
         }
@@ -29,7 +29,7 @@ namespace Infrastructure.Repositories
         public async Task<Usuario?> ObterPorEmailAsync(string email)
         {
             using IDbConnection dbConnection = new NpgsqlConnection(_connectionString);
-            string sql = "SELECT id, nome, email, senha FROM usuarios WHERE email = @Email";
+            string sql = "SELECT id, nome, email, senha, assinaturaid FROM usuarios WHERE email = @Email";
 
             return await dbConnection.QueryFirstOrDefaultAsync<Usuario>(sql, new { Email = email });
         }
@@ -37,7 +37,7 @@ namespace Infrastructure.Repositories
         public async Task<Usuario?> ObterPorIdAsync(Guid id)
         {
             using IDbConnection dbConnection = new NpgsqlConnection(_connectionString);
-            string sql = "SELECT id, nome, email, senha FROM usuarios WHERE id = @Id";
+            string sql = "SELECT id, nome, email, senha, assinaturaid FROM usuarios WHERE id = @Id";
 
             return await dbConnection.QueryFirstOrDefaultAsync<Usuario>(sql, new { Id = id });
         }
@@ -45,7 +45,7 @@ namespace Infrastructure.Repositories
         public async Task AtualizarAsync(Usuario usuario)
         {
             using IDbConnection dbConnection = new NpgsqlConnection(_connectionString);
-            string sql = "UPDATE usuarios SET nome = @Nome, email = @Email, senha = @Senha WHERE id = @Id";
+            string sql = "UPDATE usuarios SET nome = @Nome, email = @Email, senha = @Senha, assinaturaid = @AssinaturaId WHERE id = @Id";
 
             await dbConnection.ExecuteAsync(sql, usuario);
         }
@@ -53,7 +53,7 @@ namespace Infrastructure.Repositories
         public async Task<Usuario?> ObterPorEmailESenhaAsync(string email, string senha)
         {
             using IDbConnection dbConnection = new NpgsqlConnection(_connectionString);
-            string sql = "SELECT id, nome, email, senha FROM usuarios WHERE email = @Email AND senha = @Senha";
+            string sql = "SELECT id, nome, email, senha, assinaturaid FROM usuarios WHERE email = @Email AND senha = @Senha";
 
             return await dbConnection.QueryFirstOrDefaultAsync<Usuario>(sql, new { Email = email, Senha = senha });
         }
