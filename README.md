@@ -1,5 +1,7 @@
 # Desafio Técnico Backend - Sistema de Gerenciamento de Assinaturas
 
+Este é um projeto desenvolvido como resolução de um desafio técnico público para fins de estudo e demonstração de habilidades arquiteturais.
+
 API RESTful em .NET 8 para gerenciamento de assinaturas e dependentes. 
 Desenvolvida utilizando os princípios do DDD (Domain-Driven Design) e acesso a dados via Dapper.
 
